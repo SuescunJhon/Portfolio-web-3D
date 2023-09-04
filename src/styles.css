@@ -12,3 +12,12 @@ body,
 canvas {
     touch-action: none;
 }
+
+.informacion {
+    z-index: 1;
+    position: absolute;
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    width: 100%;
+}
