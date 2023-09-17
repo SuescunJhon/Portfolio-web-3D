@@ -1,19 +1,20 @@
 import {OrbitControls} from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
-import {useRef} from "react";
+import Fox from "./World/Fox";
+import Suelo from "./World/Suelo";
+import Pared from "./World/Pared";
+import Lights from "./World/Lights";
+import Environment from "./World/Environment";
 
 const Experience = () => {
-    const boxRef = useRef();
-    useFrame((state, delta) => {boxRef.current.rotation.x += 1 * delta});
-
-    return(<>
-        <OrbitControls makeDefault />
-        <ambientLight intensity={0.5}/>
-        <directionalLight position={[10, 10, 5]} intensity={2}/>
-        <mesh ref={boxRef}>
-            <boxGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color="yellow"/>
-        </mesh>
+    return(
+    <>
+        <OrbitControls makeDefault/>
+        <Lights/>
+        <Environment/>
+        <Fox position={[5,1.5,5]} scale={0.6} rotation-y={5}/>
+        <Suelo/>
+        <Pared position={[5, 2, 0]} args={[10,8]}/>
+        <Pared position={[10,2,5]} args={[10,8]} rotation={[0, -Math.PI/2, 0]}/>
     </>
     );
 }
