@@ -11,6 +11,7 @@ import Torus from "./World/Torus";
 import { useState } from "react";
 import Texto from "./World/Texto";
 import TextoZorro from "./World/TextoZorro";
+import Cajon from "./World/Cajon";
 
 const Experience = () => {
     const [comentario, setComentario] = useState("")
@@ -45,6 +46,7 @@ const Experience = () => {
             <Suelo position={[5, -2, 5]} rotation={[-Math.PI / 2, 0, -Math.PI / 4]} receiveShadow />
             <Pared position={[9, 2, 2]} args={[20, 8]} rotation={[0, -0.78, 0]} receiveShadow />
             <Pared position={[12, 2, 12]} args={[10, 8]} rotation={[0, -2.35, 0]} receiveShadow />
+            <Cajon position={[13, -1.5, 7.6]} rotation-y={-0.78} castShadow scale={1.5} />
         </>
     );
 }
