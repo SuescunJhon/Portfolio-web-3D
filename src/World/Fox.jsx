@@ -10,9 +10,9 @@ const Fox = (props) => {
     action.play()
   }, [])
 
-    
-    return (
-        <group ref={group} {...props} dispose={null}>
+
+  return (
+    <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="root">
@@ -97,8 +97,9 @@ const Fox = (props) => {
           </group>
         </group>
       </group>
+      {props.children}
     </group>
-    );
+  );
 }
 
 export default Fox;

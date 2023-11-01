@@ -11,8 +11,9 @@ export default function Torus(props) {
 
     return (
         <mesh {...props} ref={refTorus}>
-            <torusGeometry args={[0.5, 0.1, 16, 100]} />
+            <torusGeometry args={[0.5, 0.2, 16, 100]} />
             <meshPhongMaterial color="red" />
+            {props.children}
         </mesh>
     )
 }
