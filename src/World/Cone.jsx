@@ -13,6 +13,7 @@ export default function Cone(props) {
         <mesh {...props} ref={refCone}>
             <coneGeometry args={[.5, 1, 32]} />
             <meshPhysicalMaterial color="lightgreen" />
+            {props.children}
         </mesh>
     )
 }

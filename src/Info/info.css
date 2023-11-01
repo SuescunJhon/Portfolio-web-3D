@@ -1,4 +1,4 @@
-.container-info{
+.container-info {
     display: flex;
     width: 35%;
     height: 100%;
@@ -7,10 +7,9 @@
     align-items: center;
     position: absolute;
     z-index: 1;
-    padding: 0rem 8rem;
 }
 
-.card-info{
+.card-info {
     padding: 2rem;
     border-radius: 1rem;
     border-bottom: 8px solid #FF5733;
@@ -20,33 +19,32 @@
 
 }
 
-.name{
+.name {
     font-size: 3rem;
     font-weight: bold;
     color: #FF5733;
-}	
+}
 
-.biography{
+.biography {
     font-size: 1.5rem;
     font-weight: bold;
     color: #454545;
 }
 
 @media (max-width: 768px) {
-    .container-info{
+    .container-info {
         width: 100%;
     }
+
     .card-info {
-        max-width: 100%; 
+        max-width: 100%;
     }
 
     .name {
-        font-size: 2rem; 
+        font-size: 2rem;
     }
 
     .biography {
-        font-size: 1.2rem; 
+        font-size: 1.2rem;
     }
 }
-
-

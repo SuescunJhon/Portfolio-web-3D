@@ -13,6 +13,7 @@ export default function Sphere(props) {
         <mesh {...props} ref={refSphere}>
             <sphereGeometry args={[0.5, 20, 20]} />
             <meshToonMaterial color="lightblue" />
+            {props.children}
         </mesh>
     );
 }

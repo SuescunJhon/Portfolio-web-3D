@@ -13,6 +13,7 @@ export default function Cube(props) {
         <mesh {...props} ref={refCube}>
             <boxGeometry args={[0.8, .8, .8]} />
             <meshNormalMaterial color="hotpink" />
+            {props.children}
         </mesh>
     )
 }   
